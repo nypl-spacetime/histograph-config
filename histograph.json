@@ -8,6 +8,9 @@
       "rules.json"
     ]
   },
+  "schemas": {
+    "dir": "../schemas/"
+  },
   "redis": {
     "host": "localhost",
     "port": 6379,
@@ -22,6 +25,7 @@
   },
   "elasticsearch": {
     "host": "localhost",
-    "port": 9292
+    "port": 9200,
+    "index": "histograph"
   }
 }
