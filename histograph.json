@@ -1,0 +1,27 @@
+{
+  "data": {
+    "dir": "../../erfgoed-en-locatie/historische-geocoder/data",
+    "validFiles": [
+      "pits.ndjson",
+      "relations.ndjson",
+      "source.json",
+      "rules.json"
+    ]
+  },
+  "redis": {
+    "host": "localhost",
+    "port": 6379,
+    "queues": {
+      "core": "histograph-queue",
+      "elasticsearch": "histograph-es-queue"
+    }
+  },
+  "neo4j": {
+    "host": "localhost",
+    "port": 7474
+  },
+  "elasticsearch": {
+    "host": "localhost",
+    "port": 9292
+  }
+}
