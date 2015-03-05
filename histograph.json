@@ -14,10 +14,7 @@
   "redis": {
     "host": "localhost",
     "port": 6379,
-    "queues": {
-      "core": "histograph-queue",
-      "elasticsearch": "histograph-es-queue"
-    }
+    "queue": "histograph-queue"
   },
   "neo4j": {
     "path": "/tmp/histograph",
@@ -27,6 +24,7 @@
   "elasticsearch": {
     "host": "localhost",
     "port": 9200,
-    "index": "histograph"
+    "index": "histograph",
+    "type": "pit"
   }
 }
