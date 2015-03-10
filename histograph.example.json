@@ -32,5 +32,8 @@
       "host": "localhost",
       "port": 13782
     }
+  },
+  "api": {
+    "host": "api.histograph.io"
   }
 }
