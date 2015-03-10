@@ -19,12 +19,16 @@
   "neo4j": {
     "path": "/tmp/histograph",
     "host": "localhost",
-    "port": 7474
+    "port": 21089
   },
   "elasticsearch": {
     "host": "localhost",
     "port": 9200,
     "index": "histograph",
     "type": "pit"
+  },
+  "graphTraversal": {
+	"host": "localhost",
+	"port": 13782
   }
 }
