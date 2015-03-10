@@ -27,8 +27,10 @@
     "index": "histograph",
     "type": "pit"
   },
-  "graphTraversal": {
-	"host": "localhost",
-	"port": 13782
+  "core": {
+    "traversal": {
+      "host": "localhost",
+      "port": 13782
+    }
   }
 }
