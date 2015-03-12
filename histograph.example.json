@@ -38,6 +38,8 @@
     }
   },
   "api": {
-    "host": "api.histograph.io"
+    "host": "api.histograph.io",
+	"externalPort": 80,
+	"internalPort": 3000
   }
 }
