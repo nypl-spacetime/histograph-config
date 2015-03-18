@@ -41,5 +41,9 @@
     "host": "api.histograph.io",
 	"externalPort": 80,
 	"internalPort": 3000
+  },
+  "io": {
+    "host": "localhost",
+	"port": 8080
   }
 }
