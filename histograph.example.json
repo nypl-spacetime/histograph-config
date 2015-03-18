@@ -1,6 +1,6 @@
 {
   "data": {
-    "dir": "../../erfgoed-en-locatie/historische-geocoder/data",
+    "dir": "/opt/historische-geocoder/data",
     "validFiles": [
       "pits.ndjson",
       "relations.ndjson",
@@ -44,6 +44,6 @@
   },
   "io": {
     "host": "localhost",
-	"port": 8080
+	"port": 1989
   }
 }
