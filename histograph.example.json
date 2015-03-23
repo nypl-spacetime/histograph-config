@@ -1,6 +1,6 @@
 {
   "data": {
-    "dir": "/opt/historische-geocoder/data",
+    "dir": "/Users/rutger/Desktop/waag/git/histograph/historische-geocoder/data/",
     "validFiles": [
       "pits.ndjson",
       "relations.ndjson",
@@ -9,7 +9,7 @@
     ]
   },
   "schemas": {
-    "dir": "../schemas/"
+    "dir": "/Users/rutger/Desktop/waag/git/histograph/schemas/"
   },
   "redis": {
     "host": "localhost",
@@ -19,11 +19,6 @@
       "graph": "histograph-graph-queue",
       "es": "histograph-es-queue"
 	  }
-  },
-  "neo4j": {
-    "path": "/tmp/histograph",
-    "host": "localhost",
-    "port": 21089
   },
   "elasticsearch": {
     "host": "localhost",
@@ -35,7 +30,12 @@
     "traversal": {
       "host": "localhost",
       "port": 13782
-    }
+    },
+	"neo4j": {
+	  "path": "/Users/rutger/hgdb",
+	  "host": "localhost",
+	  "port": 21089
+	}
   },
   "api": {
     "host": "api.histograph.io",
@@ -44,6 +44,6 @@
   },
   "io": {
     "host": "localhost",
-	"port": 1989
+	"port": 1989 
   }
 }
