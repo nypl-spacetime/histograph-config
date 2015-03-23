@@ -31,11 +31,11 @@
       "host": "localhost",
       "port": 13782
     },
-	"neo4j": {
-	  "path": "/Users/rutger/hgdb",
-	  "host": "localhost",
-	  "port": 21089
-	}
+    "neo4j": {
+	    "path": "/Users/rutger/hgdb",
+      "host": "localhost",
+      "port": 21089
+    }
   },
   "api": {
     "host": "api.histograph.io",
