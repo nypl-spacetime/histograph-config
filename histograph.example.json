@@ -39,11 +39,11 @@
   },
   "api": {
     "host": "api.histograph.io",
-	"externalPort": 80,
-	"internalPort": 3000
+    "externalPort": 80,
+    "internalPort": 3000
   },
   "io": {
     "host": "localhost",
-	"port": 1989 
+	  "port": 1989
   }
 }
