@@ -4,8 +4,7 @@
     "validFiles": [
       "pits.ndjson",
       "relations.ndjson",
-      "source.json",
-      "rules.json"
+      "source.json"
     ]
   },
   "schemas": {
@@ -45,5 +44,14 @@
   "io": {
     "host": "localhost",
 	  "port": 1989
-  }
+  },
+  "logo": [
+    "   ●───────●   ",
+    "  /║       ║\\  ",
+    " / ║       ║ \\ ",
+    "●  ║═══════║  ●",
+   " \\ ║       ║ / ",
+   "  \\║       ║/  ",
+    "   ●───────●   "
+  ]
 }
