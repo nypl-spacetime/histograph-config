@@ -16,7 +16,8 @@
     "queues": {
       "histograph": "histograph-queue",
       "graph": "histograph-graph-queue",
-      "es": "histograph-es-queue"
+      "es": "histograph-es-queue",
+      "pg": "histograph-pg-queue"
     }
   },
   "elasticsearch": {
