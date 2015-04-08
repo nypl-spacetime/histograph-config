@@ -46,12 +46,9 @@
   },
   "api": {
     "host": "api.histograph.io",
+    "io": "../io",
     "externalPort": 80,
     "internalPort": 3000
-  },
-  "io": {
-    "host": "localhost",
-	  "port": 1989
   },
   "logo": [
       "   ●───────●   ",
