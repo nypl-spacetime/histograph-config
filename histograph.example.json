@@ -1,10 +1,8 @@
 {
   "data": {
-    "dir": "/Users/rutger/Desktop/waag/git/histograph/historische-geocoder/data/",
-    "validFiles": [
-      "pits.ndjson",
-      "relations.ndjson",
-      "source.json"
+    "dirs": [
+      "../../erfgoed-en-locatie/historische-geocoder/data",
+      "../data"
     ]
   },
   "schemas": {
@@ -32,7 +30,7 @@
       "port": 13782
     },
     "neo4j": {
-      "path": "/Users/rutger/hgdb",
+      "path": "/Users/rutger/histograph/neo4j",
       "host": "localhost",
       "port": 21089
     },
@@ -47,8 +45,13 @@
   "api": {
     "host": "api.histograph.io",
     "io": "../io",
+    "dataDir": "/Users/rutger/histograph",
     "externalPort": 80,
-    "internalPort": 3000
+    "internalPort": 3000,
+    "admin": {
+      "name": "histograph",
+      "password": null
+    }
   },
   "logo": [
       "   ●───────●   ",
