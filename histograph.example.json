@@ -1,5 +1,5 @@
 {
-  "data": {
+  "import": {
     "dirs": [
       "../../erfgoed-en-locatie/historische-geocoder/data",
       "../data"
