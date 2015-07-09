@@ -12,7 +12,7 @@
     "host": "localhost",
     "port": 6379,
     "queues": {
-      "histograph": "histograph",
+      "histograph": "histograph"
     }
   },
   "elasticsearch": {
