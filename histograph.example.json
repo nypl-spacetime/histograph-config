@@ -1,4 +1,31 @@
 {
+   "data": {
+    "geonames": {
+      "countries": [
+        "NL"
+      ]
+    },
+    "tgn": {
+      "args": [
+        {
+          "label": "Nederland",
+          "parent": "tgn:7016845"
+        }
+      ]
+    },
+    "bag": {
+      "db": {
+        "host": "localhost",
+        "port": 5432,
+        "user": "postgres",
+        "password": "postgres",
+        "database": "bag"
+      }
+    },
+    "nwb": {
+      "path": "/Users/bert/data/histograph/data/nwbwegen.zip"
+    }
+   },
   "import": {
     "dirs": [
       "../../erfgoed-en-locatie/historische-geocoder/data",
