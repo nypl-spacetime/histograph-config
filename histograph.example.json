@@ -6,41 +6,22 @@
     ]
   },
   "schemas": {
-    "dir": "/Users/rutger/Desktop/waag/git/histograph/schemas/"
+    "dir": "../schemas/"
   },
   "redis": {
     "host": "localhost",
     "port": 6379,
     "queues": {
-      "histograph": "histograph-queue",
-      "graph": "histograph-graph-queue",
-      "es": "histograph-es-queue",
-      "pg": "histograph-pg-queue"
+      "histograph": "histograph",
     }
   },
   "elasticsearch": {
     "host": "localhost",
-    "port": 9200,
-    "index": "histograph",
-    "type": "pit"
+    "port": 9200
   },
-  "core": {
-    "traversal": {
-      "host": "localhost",
-      "port": 13782
-    },
-    "neo4j": {
-      "path": "/Users/rutger/histograph/neo4j",
-      "host": "localhost",
-      "port": 21089
-    },
-    "postgresql": {
-      "host": "localhost",
-      "port": 5432,
-      "user": "histograph",
-      "pass": "",
-      "db": "histograph"
-    }
+  "neo4j": {
+    "host": "localhost",
+    "port": 7474
   },
   "api": {
     "host": "api.histograph.io",
