@@ -51,6 +51,7 @@
     "port": 7474
   },
   "api": {
+    "protocol": "https",
     "host": "api.histograph.io",
     "io": "../io",
     "dataDir": "/Users/rutger/histograph",
@@ -60,6 +61,9 @@
       "name": "histograph",
       "password": null
     }
+  },
+  "viewer": {
+    "language": "en"
   },
   "logo": [
       "   ●───────●   ",
