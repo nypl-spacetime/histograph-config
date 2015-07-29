@@ -51,10 +51,9 @@
     "port": 7474
   },
   "api": {
-    "protocol": "https",
-    "host": "api.histograph.io",
-    "io": "../io",
-    "dataDir": "/Users/rutger/histograph",
+    "protocol": "http",
+    "host": "localhost",
+    "dataDir": "/usr/local/histograph",
     "externalPort": 80,
     "internalPort": 3000,
     "admin": {
