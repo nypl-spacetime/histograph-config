@@ -3,13 +3,10 @@ api:
   host: localhost
   port: 3001
   baseUrl: http://localhost:3001
-  dataDir: /usr/local/histograph
+  dataDir:
   admin:
-    name: histograph
-    password: null
-
-schemas:
-  dir: ../schemas/
+    name:
+    password:
 
 redis:
   host: localhost
