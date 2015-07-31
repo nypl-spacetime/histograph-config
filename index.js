@@ -3,7 +3,7 @@ var argv = require('minimist')(process.argv.slice(2));
 var fs = require('fs');
 var path = require('path');
 var util = require('util');
-var R = require('ramda');
+var _ = require('lodash');
 var yaml = require('js-yaml');
 
 function die(message) {
@@ -27,7 +27,7 @@ module.exports = (function() {
 
   try {
     var userConfig = yaml.safeLoad(fs.readFileSync(filename, 'utf8'));
-    config = R.merge(config, userConfig);
+    config = _.merge(config, userConfig);
   } catch (e) {
     die(util.format('Can\'t open configuration file `%s`', filename));
   }
