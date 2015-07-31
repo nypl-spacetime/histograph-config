@@ -1,6 +1,7 @@
 var argv = require('minimist')(process.argv.slice(2));
 
 var fs = require('fs');
+var path = require('path');
 var util = require('util');
 var R = require('ramda');
 var yaml = require('js-yaml');
@@ -19,7 +20,7 @@ module.exports = (function() {
   }
 
   try {
-    config = yaml.safeLoad(fs.readFileSync('./histograph.default.yml', 'utf8'));
+    config = yaml.safeLoad(fs.readFileSync(path.join(__dirname, 'histograph.default.yml'), 'utf8'));
   } catch (e) {
     die('Failed to open default configuration file `histograph.default.yml`');
   }
