@@ -5,7 +5,7 @@ var path = require('path');
 var util = require('util');
 var _ = require('lodash');
 var yaml = require('js-yaml');
-var schema = require('./config.schema.json');
+var schema = require(path.join(__dirname, 'config.schema.json'));
 var validator = require('is-my-json-valid');
 var validate = validator(schema);
 
