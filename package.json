@@ -12,6 +12,7 @@
   },
   "homepage": "https://github.com/histograph/config#readme",
   "dependencies": {
+    "is-my-json-valid": "^2.12.1",
     "js-yaml": "^3.3.1",
     "lodash": "^3.10.0",
     "minimist": "^1.1.2"

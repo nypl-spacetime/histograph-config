@@ -5,6 +5,9 @@ var path = require('path');
 var util = require('util');
 var _ = require('lodash');
 var yaml = require('js-yaml');
+var schema = require('./config.schema.json');
+var validator = require('is-my-json-valid');
+var validate = validator(schema);
 
 function die(message) {
   console.error(message);
@@ -27,12 +30,16 @@ module.exports = (function() {
 
   try {
     var userConfig = yaml.safeLoad(fs.readFileSync(filename, 'utf8'));
+
+    // Merge default config file with user config
     config = _.merge(config, userConfig);
   } catch (e) {
     die(util.format('Can\'t open configuration file `%s`', filename));
   }
 
-  // TODO: check JSON schema with is-my-json-valid!
-
-  return config;
+  if (validate(config)) {
+    return config;
+  } else {
+    die(validate.errors);
+  }
 }());
