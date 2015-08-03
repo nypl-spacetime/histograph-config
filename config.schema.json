@@ -82,7 +82,20 @@
         },
         "port": {
           "type": "integer"
-        }
+        },
+        "user": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "additionalProperties": false,
+        "required": [
+          "host",
+          "port",
+          "user",
+          "password"
+        ]
       }
     },
     "core": {
