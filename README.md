@@ -14,3 +14,18 @@ histograph-config loads the default configuration from [`histograph.default.yml`
 ```bash
 export HISTOGRAPH_CONFIG=/Users/bert/code/histograph/config/histograph.bert.yml
 ```
+
+This configuration file should at least specify the following options:
+
+```yml
+api:
+  dataDir: /Users/bert/data/histograph
+  admin:
+    name: histograph
+    password: password
+
+import:
+  dirs:
+    - ../data
+    - ../../erfgoed-en-locatie/historische-geocoder/data
+```
