@@ -1,0 +1,171 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "api": {
+      "type": "object",
+      "properties": {
+        "protocol": {
+          "type": "string"
+        },
+        "host": {
+          "type": "string"
+        },
+        "port": {
+          "type": "integer"
+        },
+        "baseUrl": {
+          "type": "string"
+        },
+        "dataDir": {
+          "type": "string"
+        },
+        "admin": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "password": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "required": [
+        "protocol",
+        "host",
+        "port",
+        "baseUrl",
+        "dataDir",
+        "admin"
+      ]
+    },
+    "redis": {
+      "type": "object",
+      "properties": {
+        "host": {
+          "type": "string"
+        },
+        "port": {
+          "type": "integer"
+        },
+        "queue": {
+          "type": "string"
+        }
+      }
+    },
+    "elasticsearch": {
+      "type": "object",
+      "properties": {
+        "host": {
+          "type": "string"
+        },
+        "port": {
+          "type": "integer"
+        }
+      }
+    },
+    "neo4j": {
+      "type": "object",
+      "properties": {
+        "host": {
+          "type": "string"
+        },
+        "port": {
+          "type": "integer"
+        }
+      }
+    },
+    "viewer": {
+      "type": "object",
+      "properties": {
+        "language": {
+          "type": "string"
+        }
+      }
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "geonames": {
+          "type": "object",
+          "properties": {
+            "countries": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "extraUris": {
+              "type": "string"
+            }
+          }
+        },
+        "tgn": {
+          "type": "object",
+          "properties": {
+            "parents": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "bag": {
+          "type": "object",
+          "properties": {
+            "db": {
+              "type": "object",
+              "properties": {
+                "host": {
+                  "type": "string"
+                },
+                "port": {
+                  "type": "integer"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "database": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "import": {
+      "type": "object",
+      "properties": {
+        "dirs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "logo": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "api",
+    "redis",
+    "elasticsearch",
+    "neo4j",
+    "viewer",
+    "data",
+    "import",
+    "logo"
+  ]
+}
