@@ -1,6 +1,6 @@
 api:
-  host: localhost
-  port: 3001
+  bindHost: 0.0.0.0
+  bindPort: 3001
   baseUrl: http://localhost:3001
   dataDir:
   admin:
@@ -30,11 +30,11 @@ viewer:
 data:
   geonames:
     countries:
-       - NL
+      - NL
     extraUris: ./extra-uris.json
   tgn:
     parents:
-        - tgn:7016845 # Netherlands
+      - tgn:7016845 # Netherlands
   bag:
     db:
       host: localhost

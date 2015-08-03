@@ -5,10 +5,10 @@
     "api": {
       "type": "object",
       "properties": {
-        "host": {
+        "bindHost": {
           "type": "string"
         },
-        "port": {
+        "bindPort": {
           "type": "integer"
         },
         "baseUrl": {
@@ -30,8 +30,8 @@
         }
       },
       "required": [
-        "host",
-        "port",
+        "bindHost",
+        "bindPort",
         "baseUrl",
         "dataDir",
         "admin"
