@@ -19,8 +19,6 @@ elasticsearch:
 neo4j:
   host: localhost
   port: 7474
-  user: neo4j
-  password: neo4j
 
 core:
   batchSize: 100

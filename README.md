@@ -24,6 +24,10 @@ api:
     name: histograph
     password: password
 
+neo4j:
+  user: neo4j
+  password: password
+
 import:
   dirs:
     - ../data
