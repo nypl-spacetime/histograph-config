@@ -29,6 +29,7 @@
           }
         }
       },
+      "additionalProperties": false,
       "required": [
         "bindHost",
         "bindPort",
@@ -39,6 +40,12 @@
     },
     "redis": {
       "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "host",
+        "port",
+        "queue"
+      ],
       "properties": {
         "host": {
           "type": "string"
@@ -53,6 +60,11 @@
     },
     "elasticsearch": {
       "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "host",
+        "port"
+      ],
       "properties": {
         "host": {
           "type": "string"
@@ -82,10 +94,19 @@
         "batchTimeout": {
           "type": "integer"
         }
-      }
+      },
+      "additionalProperties": false,
+      "required": [
+        "batchSize",
+        "batchTimeout"
+      ]
     },
     "viewer": {
       "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "language"
+      ],
       "properties": {
         "language": {
           "type": "string"
@@ -165,6 +186,7 @@
       }
     }
   },
+  "additionalProperties": false,
   "required": [
     "api",
     "redis",
