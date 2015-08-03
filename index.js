@@ -40,6 +40,6 @@ module.exports = (function() {
   if (validate(config)) {
     return config;
   } else {
-    die(validate.errors);
+    die('Invalid configuration file: ' + JSON.stringify(validate.errors));
   }
 }());
