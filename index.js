@@ -19,7 +19,7 @@ module.exports = (function() {
   var filename = argv.config || process.env.HISTOGRAPH_CONFIG;
 
   if (!filename) {
-    die('doe of HISTOGRAPH_CONFIG of --config!');
+    die('Please specify location of your user configuration in environment variable `HISTOGRAPH_CONFIG`, or use the `--config` command line option');
   }
 
   try {
