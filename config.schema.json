@@ -74,6 +74,17 @@
         }
       }
     },
+    "core": {
+      "type": "object",
+      "properties": {
+        "batchSize": {
+          "type": "integer"
+        },
+        "batchTimeout": {
+          "type": "integer"
+        }
+      }
+    },
     "viewer": {
       "type": "object",
       "properties": {

@@ -20,6 +20,10 @@ neo4j:
   host: localhost
   port: 7474
 
+core:
+  batchSize: 100
+  batchTimeout: 250
+
 viewer:
   language: en
 
