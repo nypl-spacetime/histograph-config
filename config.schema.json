@@ -30,7 +30,6 @@
         }
       },
       "required": [
-        "protocol",
         "host",
         "port",
         "baseUrl",
