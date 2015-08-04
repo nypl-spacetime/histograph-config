@@ -1,3 +1,6 @@
+schemas:
+  module: null
+
 api:
   bindHost: 0.0.0.0
   bindPort: 3001

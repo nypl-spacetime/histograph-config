@@ -2,6 +2,21 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
+    "schemas": {
+      "type": "object",
+      "properties": {
+        "module": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "module"
+      ]
+    },
     "api": {
       "type": "object",
       "properties": {
@@ -201,6 +216,7 @@
   },
   "additionalProperties": false,
   "required": [
+    "schemas",
     "api",
     "redis",
     "elasticsearch",
