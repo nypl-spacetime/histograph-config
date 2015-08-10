@@ -5,16 +5,35 @@
     "schemas": {
       "type": "object",
       "properties": {
-        "module": {
-          "type": [
-            "null",
-            "string"
-          ]
+        "baseUri": {
+          "type": "string"
+        },
+        "baseType": {
+          "type": "string"
+        },
+        "types": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "relations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "equivalence": {
+          "type": "string"
         }
       },
       "additionalProperties": false,
       "required": [
-        "module"
+        "baseUri",
+        "baseType",
+        "types",
+        "relations",
+        "equivalence"
       ]
     },
     "api": {

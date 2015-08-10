@@ -1,6 +1,3 @@
-schemas:
-  module: null
-
 api:
   bindHost: 0.0.0.0
   bindPort: 3001
@@ -48,6 +45,48 @@ data:
 
 import:
   dirs:
+
+schemas:
+  baseUri: http://rdf.histograph.io/
+
+  baseType: PlaceInTime
+
+  types:
+    - Address
+    - Building
+    - Monument
+    - Fort
+    - Street
+    - Neighbourhood
+    - Borough
+    - Place
+    - Municipality
+    - Water
+    - Polder
+    - Area
+    - Region
+    - Province
+    - Baljuwschap
+    - Barony
+    - Departement
+    - Countship
+    - Heerlijkheid
+    - Country
+
+  relations:
+    - sameHgConcept
+    - containsHgConcept
+    - withinHgConcept
+    - intersectsHgConcept
+    - isUsedFor
+    - absorbed
+    - absorbedBy
+    - originated
+    - originatedFrom
+    - contains
+    - liesIn
+
+  equivalence: sameHgConcept
 
 logo:
   - "   ●───────●    "
