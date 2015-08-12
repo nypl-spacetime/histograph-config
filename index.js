@@ -30,12 +30,18 @@ module.exports = (function() {
 
   try {
     var userConfig = yaml.safeLoad(fs.readFileSync(filename, 'utf8'));
-
-    // Merge default config file with user config
-    config = _.merge(config, userConfig);
   } catch (e) {
     die(util.format('Can\'t open configuration file `%s`', filename));
   }
+
+  // Merge default config file with user config
+  // However, arrays should not be merged - all arrays in default config which are
+  // also in userConfig should be emptied first
+  config = _.merge(config, userConfig, function(a, b) {
+    if (_.isArray(a)) {
+      return b;
+    }
+  });
 
   if (validate(config)) {
     return config;
