@@ -39,6 +39,15 @@
     "api": {
       "type": "object",
       "properties": {
+        "defaultPathRelation": {
+          "type": "string"
+        },
+        "hairRelations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "bindHost": {
           "type": "string"
         },
@@ -69,7 +78,9 @@
         "bindPort",
         "baseUrl",
         "dataDir",
-        "admin"
+        "admin",
+        "defaultPathRelation",
+        "hairRelations"
       ]
     },
     "redis": {

@@ -2,6 +2,13 @@ api:
   bindHost: 0.0.0.0
   bindPort: 3001
   baseUrl: http://localhost:3001
+  defaultPathRelation: hg:liesIn
+  hairRelations:
+    - hg:liesIn
+    - hg:originated
+    - hg:originatedFrom
+    - hg:absorbed
+    - hg:absorbedBy
   dataDir:
   admin:
     name:
