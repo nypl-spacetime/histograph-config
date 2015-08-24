@@ -37,6 +37,9 @@ core:
 
 viewer:
   language: en
+  version: simple                              # simple|advanced
+  logo: images/histograph.svg
+  color: 'rgb(74,187,131)'
 
 data:
   geonames:
@@ -45,7 +48,7 @@ data:
     extraUris: ./extra-uris.json
   tgn:
     parents:
-      - tgn:7016845 # Netherlands
+      - tgn:7016845                            # Netherlands
   bag:
     db:
       host: localhost

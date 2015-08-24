@@ -185,10 +185,26 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "language"
+        "language",
+        "version",
+        "logo",
+        "color"
       ],
       "properties": {
         "language": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string",
+          "enum": [
+            "simple",
+            "advanced"
+          ]
+        },
+        "logo": {
+          "type": "string"
+        },
+        "color": {
           "type": "string"
         }
       }
