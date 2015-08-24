@@ -188,7 +188,8 @@
         "language",
         "version",
         "logo",
-        "color"
+        "color",
+        "suffixFilters"
       ],
       "properties": {
         "language": {
@@ -206,6 +207,9 @@
         },
         "color": {
           "type": "string"
+        },
+        "suffixFilters": {
+          "type": "array"
         }
       }
     },
