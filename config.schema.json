@@ -83,6 +83,22 @@
         "hairRelations"
       ]
     },
+    "stats": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "enabled",
+        "cronExpression"
+      ],
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "cronExpression": {
+          "type": "string"
+        }
+      }
+    },
     "redis": {
       "type": "object",
       "additionalProperties": false,
@@ -253,6 +269,7 @@
   "additionalProperties": false,
   "required": [
     "schemas",
+    "stats",
     "api",
     "redis",
     "elasticsearch",
