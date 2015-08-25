@@ -203,7 +203,9 @@
           ]
         },
         "logo": {
-          "type": "string"
+          "type": [
+            "string", "null"
+          ]
         },
         "color": {
           "type": "string"
