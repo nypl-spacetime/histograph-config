@@ -37,7 +37,7 @@ core:
 
 viewer:
   language: en
-  mode: simple                              # simple|advanced
+  mode: advanced                            # simple|advanced
   logo: images/histograph.svg               # relative or absolute path to logo, image or SVG, 44px wide
   color: 'rgb(74,187,131)'
   suffixFilters:
