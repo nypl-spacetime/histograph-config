@@ -36,13 +36,14 @@ core:
   batchTimeout: 250
 
 viewer:
-  language: en
+  language: en                              # English ('en'), or Dutch ('nl')
   mode: advanced                            # simple|advanced
   logo: images/histograph.svg               # relative or absolute path to logo, image or SVG, 44px wide
-  color: 'rgb(74,187,131)'
-  suffixFilters:
-    - Provincie
-    - Gemeente
+                                            #   empty or null means no logo
+  color: 'rgb(74,187,131)'                  # viewer base color
+  suffixFilters:                            # replace these words with '' in liesIn suffixes,
+    - Provincie                             #   e.g. 'Amsterdam, Provincie Noord-Holland' becomes
+    - Gemeente                              #   'Amsterdam, Noord-Holland'
 
 data:
   geonames:
@@ -51,7 +52,7 @@ data:
     extraUris: ./extra-uris.json
   tgn:
     parents:
-      - tgn:7016845                         # Netherlands
+      - tgn:7016845                         # The Netherlands
   bag:
     db:
       host: localhost
