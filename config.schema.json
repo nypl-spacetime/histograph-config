@@ -186,7 +186,7 @@
       "additionalProperties": false,
       "required": [
         "language",
-        "version",
+        "mode",
         "logo",
         "color",
         "suffixFilters"
@@ -195,7 +195,7 @@
         "language": {
           "type": "string"
         },
-        "version": {
+        "mode": {
           "type": "string",
           "enum": [
             "simple",
