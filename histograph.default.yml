@@ -1,51 +1,59 @@
-api:
-  bindHost: 0.0.0.0
+api:                                        # API and IO options (http://github.com/histograph/api
+  bindHost: 0.0.0.0                         #   and http://github.com/histograph/io)
   bindPort: 3001
   baseUrl: http://localhost:3001
-  defaultPathRelation: hg:liesIn
-  hairRelations:
-    - hg:liesIn
-    - hg:originated
+  defaultPathRelation: hg:liesIn            # Default relation that is used to solve combined
+                                            #   queries, e.g. 'hoorn, friesland'
+  hairRelations:                            # Non-equivalence PIT-PIT relations returned by
+    - hg:liesIn                             #   neo4j-plugin, in hairs array
+    - hg:originated                         #   (http://github.com/histograph/neo4j-plugin)
     - hg:originatedFrom
     - hg:absorbed
     - hg:absorbedBy
+
+  # Absolute or relative directory on file system where API's IO module keeps uploaded
+  #   NDJSON files. IO keeps __two__ copies of each file, please make sure HD has enough
+  #   free space!
   dataDir:
+  # Credentials of API's admin owner - this name + password is needed when creating/deleting
+  #   datasets and uploading data using the REST API
   admin:
     name:
     password:
 
-stats:
-  enabled: true
-  cronExpression: '0 */30 * * * *'
+stats:                                      # Stats options (http://github.com/histograph/stats)
+  enabled: true                             # Set enabled to false when stats module leads to
+                                            #   performance problems
+  cronExpression: '0 0 */3 * * *'           # Run every three hours
 
-redis:
+redis:                                      # Redis connection details
   host: localhost
   port: 6379
   queue: histograph
 
-elasticsearch:
+elasticsearch:                              # Elasticsearch connection details
   host: localhost
   port: 9200
 
-neo4j:
+neo4j:                                      # Neo4j connection details + opt. authentication
   host: localhost
   port: 7474
 
-core:
+core:                                       # Core options (http://github.com/histograph/core)
   batchSize: 100
   batchTimeout: 250
 
-viewer:
-  language: en                              # English ('en'), or Dutch ('nl')
-  mode: advanced                            # simple|advanced
-  logo: images/histograph.svg               # relative or absolute path to logo, image or SVG, 44px wide
+viewer:                                     # Viewer options (http://github.com/histograph/viewer)
+  language: en                              # Language: English ('en'), or Dutch ('nl')
+  mode: advanced                            # Mode: 'simple' or 'advanced'
+  logo: images/histograph.svg               # Relative or absolute path to logo, image or SVG, 44px wide
                                             #   empty or null means no logo
-  color: 'rgb(74,187,131)'                  # viewer base color
-  suffixFilters:                            # replace these words with '' in liesIn suffixes,
+  color: 'rgb(74,187,131)'                  # Viewer base color
+  suffixFilters:                            # Replace these words with '' in liesIn suffixes,
     - Provincie                             #   e.g. 'Amsterdam, Provincie Noord-Holland' becomes
     - Gemeente                              #   'Amsterdam, Noord-Holland'
 
-data:
+data:                                       # Data module options (http://github.com/histograph/data)
   geonames:
     countries:
       - NL
@@ -61,15 +69,16 @@ data:
       password: postgres
       database: bag
 
-import:
-  dirs:
+import:                                     # Import options (http://github.com/histograph/import)
+  dirs:                                     # Absolute or relative paths to directories containing
+                                            #   Histograph datasets which can be imported by import module
 
-schemas:
-  baseUri: http://rdf.histograph.io/
+schemas:                                    # Schema/ontology options (http://github.com/histograph/schema)
+  baseUri: http://rdf.histograph.io/        # Base URI, used in JSON-LD serialization
 
   baseType: PlaceInTime
 
-  types:
+  types:                                    # Histograph's default types
     - hg:Address
     - hg:Building
     - hg:Monument
@@ -91,7 +100,7 @@ schemas:
     - hg:Heerlijkheid
     - hg:Country
 
-  relations:
+  relations:                                # Default relations
     - hg:sameHgConcept
     - hg:containsHgConcept
     - hg:withinHgConcept
@@ -103,7 +112,8 @@ schemas:
     - hg:contains
     - hg:liesIn
 
-  equivalence: hg:sameHgConcept
+  equivalence: hg:sameHgConcept            # Equivalence relation, defining whether PITs belong to
+                                           #   the same concept
 
 logo:
   - "   ●───────●    "
