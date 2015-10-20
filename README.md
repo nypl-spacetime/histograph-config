@@ -33,3 +33,6 @@ import:
     - ../data
     - ../../erfgoed-en-locatie/historische-geocoder/data
 ```
+
+
+Copyright (C) 2015 [Waag Society](http://waag.org).
