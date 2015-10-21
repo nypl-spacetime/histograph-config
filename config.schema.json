@@ -278,12 +278,34 @@
       "type": "object",
       "properties": {
         "dirs": {
-          "type": "array",
+          "type": ["array", "null"],
           "items": {
             "type": "string"
           }
+        },
+        "s3": {
+          "type": "object",
+          "properties": {
+            "region": {
+              "type": ["string", "null"]
+            },
+            "accessKeyId": {
+              "type": ["string", "null"]
+            },
+            "secretAccessKey": {
+              "type": ["string", "null"]
+            },
+            "buckets": {
+              "type": ["array", "null"],
+              "items": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
         }
-      }
+      },
+      "additionalProperties": false
     },
     "logo": {
       "type": "array",

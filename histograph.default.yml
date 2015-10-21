@@ -71,8 +71,13 @@ data:                                       # Data module options (http://github
       database: bag
 
 import:                                     # Import options (http://github.com/histograph/import)
-  dirs:                                     # Absolute or relative paths to directories containing
+  dirs:                                     # Array of absolute or relative paths to directories containing
                                             #   Histograph datasets which can be imported by import module
+  s3:                                       # Import can also import datasets from Amazon Web Services S3
+    region:                                 #   Set the S3 region, access keys and buckets in this section.
+    accessKeyId:
+    secretAccessKey:
+    buckets:                                # Array of S3 buckets
 
 schemas:                                    # Schema/ontology options (http://github.com/histograph/schema)
   baseUri: http://rdf.histograph.io/        # Base URI, used in JSON-LD serialization
