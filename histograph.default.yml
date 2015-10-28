@@ -22,7 +22,7 @@ api:                                        # API and IO options (http://github.
     password:
 
 stats:                                      # Stats options (http://github.com/histograph/stats)
-  enabled: true                             # Set enabled to false when stats module leads to
+  enabled: false                            # Set enabled to false when stats module leads to
                                             #   performance problems
   cronExpression: '0 0 */3 * * *'           # Run every three hours
 
