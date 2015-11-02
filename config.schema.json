@@ -48,6 +48,12 @@
             "type": "string"
           }
         },
+        "exampleUrls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "bindHost": {
           "type": "string"
         },
