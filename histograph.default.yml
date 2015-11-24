@@ -74,21 +74,26 @@ viewer:                                     # Viewer options (http://github.com/
     - Provincie                             #   e.g. 'Amsterdam, Provincie Noord-Holland' becomes
     - Gemeente                              #   'Amsterdam, Noord-Holland'
 
-data:                                       # Data module options (http://github.com/histograph/data)
-  geonames:
-    countries:
-      - NL
-    extraUris: ./extra-uris.json
-  tgn:
-    parents:
-      - tgn:7016845                         # The Netherlands
-  bag:
-    db:
-      host: localhost
-      port: 5432
-      user: postgres
-      password: postgres
-      database: bag
+data:                                       # Data tool options (http://github.com/histograph/data)
+  baseDir: ../                              # Path (absolute, or relative to data module) where data tool
+                                            #   looks for data modules
+  modulePrefix: data-                       # Prefix used to identify data modules (e.g. `data-tgn`)
+  generatedDir: ../generated-data/          # Directory where data modules write their data
+  modules:                                  # Configuration for the different available data modules
+    geonames:
+      countries:
+        - NL
+      extraUris: ./extra-uris.json
+    tgn:
+      parents:
+        - tgn:7016845                         # The Netherlands
+    bag:
+      db:
+        host: localhost
+        port: 5432
+        user: postgres
+        password: postgres
+        database: bag
 
 import:                                     # Import options (http://github.com/histograph/import)
   dirs:                                     # Array of absolute or relative paths to directories containing
