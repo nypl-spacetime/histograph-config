@@ -66,7 +66,7 @@
         "dataDir": {
           "type": "string"
         },
-        "admin": {
+		"admin": {
           "type": "object",
           "properties": {
             "name": {
@@ -283,7 +283,7 @@
     "import": {
       "type": "object",
       "properties": {
-        "dirs": {
+		"dirs": {
           "type": ["array", "null"],
           "items": {
             "type": "string"
@@ -309,7 +309,10 @@
             },
             "additionalProperties": false
           }
-        }
+        },
+		"diffTool": {
+			"type" : "string"
+		}
       },
       "additionalProperties": false
     },

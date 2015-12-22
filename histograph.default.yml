@@ -91,6 +91,7 @@ data:                                       # Data module options (http://github
       database: bag
 
 import:                                     # Import options (http://github.com/histograph/import)
+  diffTool: diff
   dirs:                                     # Array of absolute or relative paths to directories containing
                                             #   Histograph datasets which can be imported by import module
   s3:                                       # Import can also import datasets from Amazon Web Services S3
