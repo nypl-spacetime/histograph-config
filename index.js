@@ -25,13 +25,13 @@ module.exports = (function() {
   try {
     config = yaml.safeLoad(fs.readFileSync(path.join(__dirname, 'histograph.default.yml'), 'utf8'));
   } catch (e) {
-    die('Failed to open default configuration file `histograph.default.yml`');
+    die(util.format('Failed to open default configuration file `histograph.default.yml` due to: \n`%s`', e.message));
   }
 
   try {
     var userConfig = yaml.safeLoad(fs.readFileSync(filename, 'utf8'));
   } catch (e) {
-    die(util.format('Can\'t open configuration file `%s`', filename));
+    die(util.format('Can\'t open configuration file `%s` due to: \n`%s`', filename, e.message));
   }
 
   // Merge default config file with user config
