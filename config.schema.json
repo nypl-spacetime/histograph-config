@@ -89,6 +89,9 @@
         "hairRelations"
       ]
     },
+    "reasoner": {
+      "type": "object"
+    },
     "stats": {
       "type": "object",
       "additionalProperties": false,
@@ -296,6 +299,7 @@
   "required": [
     "schemas",
     "stats",
+    "reasoner",
     "api",
     "redis",
     "elasticsearch",
