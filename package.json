@@ -26,7 +26,7 @@
     "test": "jshint *.js && jscs *.js"
   },
   "author": "Bert Spaan <bert@waag.org>",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "jshintConfig": {
     "node": true,
     "globalstrict": false,

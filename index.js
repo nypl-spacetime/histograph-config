@@ -16,6 +16,7 @@ function die(message) {
 
 module.exports = (function() {
   var config;
+  var userConfig;
   var filename = argv.config || process.env.HISTOGRAPH_CONFIG;
 
   if (!filename) {
@@ -29,7 +30,7 @@ module.exports = (function() {
   }
 
   try {
-    var userConfig = yaml.safeLoad(fs.readFileSync(filename, 'utf8'));
+    userConfig = yaml.safeLoad(fs.readFileSync(filename, 'utf8'));
   } catch (e) {
     die(util.format('Can\'t open configuration file `%s` due to: \n`%s`', filename, e.message));
   }
