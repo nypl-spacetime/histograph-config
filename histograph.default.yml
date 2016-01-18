@@ -81,12 +81,36 @@ data:                                       # Data tool options (http://github.c
   generatedDir: ../generated-data/          # Directory where data modules write their data
   modules:                                  # Configuration for the different available data modules
     geonames:
-      countries:
-        - NL
+      filters:
+        - countryCode: NL
+      relations:
+        liesIn: hg:liesIn
+      types:
+        PCLI: hg:Country
+        ADM1: hg:Province
+        ADM2: hg:Municipality
+        PPLX: hg:Neighbourhood
+        PPL: hg:Place
+        CNL: hg:Water
       extraUris: ./extra-uris.json
     tgn:
       parents:
-        - tgn:7016845                         # The Netherlands
+        - tgn:7016845                       # The Netherlands
+      relations:
+        liesIn: hg:liesIn
+        equivalence: hg:sameAs
+      types:
+        nations: hg:Country
+        area: hg:Area
+        canals: hg:Water
+        channels: hg:Water
+        general regions: hg:Region
+        inhabited places: hg:Place
+        provinces: hg:Province
+        second level subdivisions: hg:Region
+        neighborhoods: hg:Neighbourhood
+        counties: hg:County
+        boroughs: hg:Borough
     bag:
       db:
         host: localhost
