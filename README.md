@@ -34,5 +34,21 @@ import:
     - ../../erfgoed-en-locatie/historische-geocoder/data
 ```
 
+If you want to use this package in a project with a different schema, you can pass a config dir that contains the following files:
 
-Copyright (C) 2015 [Waag Society](http://waag.org).
+```
+├── config.schema.json
+├── default.yml
+└── local.yml
+```
+
+All files must be provided and `local.yml` will override `default.yml`. The idea is that `local.yml` is specific to the production or development environment. You can specify the location of this directory in two ways:
+
+1. Start the project module with the argument `--config-dir path/to/config`
+2. Set the `HISTOGRAPH_CONFIG_DIR` environment variable to the path of the configuration file:
+
+```bash
+export HISTOGRAPH_CONFIG_DIR=/Users/bert/code/transparantnederland/config
+```
+
+Copyright (C) 2016 [Waag Society](http://waag.org).
