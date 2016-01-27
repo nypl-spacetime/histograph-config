@@ -7,11 +7,6 @@ var yaml = require('js-yaml');
 
 var argv = require('minimist')(process.argv.slice(2));
 
-function die(message) {
-  console.error(message);
-  process.exit(-1);
-}
-
 module.exports = (function() {
   var config, data, files, schema, schemaFile, validate;
 
@@ -31,14 +26,14 @@ module.exports = (function() {
     ];
     schemaFile = path.join(__dirname, 'config.schema.json');
   } else {
-    die('Please specify location of your user configuration in environment variable `HISTOGRAPH_CONFIG` or `HISTOGRAPH_CONFIG_DIR`, or use the `--config` or `--config-dir` command line option');
+    throw new Error('Please specify location of your user configuration in environment variable `HISTOGRAPH_CONFIG` or `HISTOGRAPH_CONFIG_DIR`, or use the `--config` or `--config-dir` command line option');
   }
 
   data = files.map(function(file) {
     try {
       return yaml.safeLoad(fs.readFileSync(file, 'utf8'));
     } catch (err) {
-      die(util.format('Can’t open configuration file `%s` due to: \n`%s`', file, err.message));
+      throw new Error(util.format('Can’t open configuration file `%s` due to: `%s`', file, err.message));
     }
   });
 
@@ -54,7 +49,7 @@ module.exports = (function() {
   try {
     schema = fs.readFileSync(schemaFile, 'utf8');
   } catch (err) {
-    die(util.format('Can’t open schema file `%s` due to: \n`%s`', schemaFile, err.message));
+    throw new Error(util.format('Can’t open schema file `%s` due to: `%s`', schemaFile, err.message));
   }
 
   validate = validator(schema);
@@ -62,6 +57,8 @@ module.exports = (function() {
   if (validate(config)) {
     return config;
   } else {
-    die('Invalid configuration file: ' + JSON.stringify(validate.errors));
+    throw new Error('Invalid configuration file: ' + validate.errors.map(function (err) {
+      return '\n  - ' + err.field + ' ' + err.message;
+    }).join(''));
   }
 }());

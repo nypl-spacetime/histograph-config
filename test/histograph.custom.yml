@@ -1,0 +1,14 @@
+api:
+  dataDir: /Users/bert/data/histograph
+  admin:
+    name: histograph
+    password: password
+
+neo4j:
+  user: neo4j
+  password: password
+
+import:
+  dirs:
+    - ../data
+    - ../../erfgoed-en-locatie/historische-geocoder/data

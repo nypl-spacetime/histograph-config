@@ -1,0 +1,94 @@
+api:                                        # API and IO options (http://github.com/histograph/api
+  bindHost: 0.0.0.0                         #   and http://github.com/histograph/io)
+  bindPort: 3001
+  baseUrl: http://localhost:3001
+  defaultPathRelation: tnl:related            # Default relation that is used to solve combined
+                                            #   queries, e.g. 'hoorn, friesland'
+  hairRelations:                            # Non-equivalence PIT-PIT relations returned by
+    - tnl:parent                            #   neo4j-plugin, in hairs array
+
+  ds_corrections: z_corrections_
+
+  exampleUrls:
+    - "/search?q=hermans"
+    - "/search?id=overheidsorganisaties/12357"
+    - "/search?q=hermans&dataset=nevenfuncties"
+    - "/datasets"
+    - "/datasets/overheidsorganisaties"
+    - "/ontology"
+    - "/schemas/pits"
+    - "/schemas/relations"
+    - "/stats/queue"
+    - "/stats/queries"
+    - "/stats/queries/types-per-dataset"
+
+  # Absolute or relative directory on file system where API's IO module keeps uploaded
+  #   NDJSON files. IO keeps __two__ copies of each file, please make sure HD has enough
+  #   free space!
+  dataDir:
+  # Credentials of API's admin owner - this name + password is needed when creating/deleting
+  #   datasets and uploading data using the REST API
+  admin:
+    name:
+    password:
+
+stats:                                      # Stats options (http://github.com/histograph/stats)
+  enabled: false                            # Set enabled to false when stats module leads to performance problems
+  cronExpression: '0 0 */3 * * *'           # Run every three hours
+
+redis:                                      # Redis connection details
+  host: localhost
+  port: 6379
+  queue: histograph
+  maxQueueSize: 100000
+
+elasticsearch:                              # Elasticsearch connection details
+  host: localhost
+  port: 9200
+
+neo4j:                                      # Neo4j connection details + opt. authentication
+  host: localhost
+  port: 7474
+
+core:                                       # Core options (http://github.com/histograph/core)
+  batchSize: 100
+  batchTimeout: 250
+
+
+import:                                     # Import options (http://github.com/histograph/import)
+  diffTool: diff
+  dirs:                                     # Array of absolute or relative paths to directories containing
+                                            # Histograph datasets which can be imported by import module
+  s3:                                       # Import can also import datasets from Amazon Web Services S3
+    region:                                 # Set the S3 region, access keys and buckets in this section.
+    accessKeyId:
+    secretAccessKey:
+    buckets:                                # Array of S3 buckets
+
+
+schemas:                                    # Schema/ontology options (http://github.com/histograph/schema)
+  baseUri: http://rdf.transparantnederland.nl/
+  baseType: NodeInTime
+  types:
+    - tnl:Person
+    - tnl:Organization
+    - tnl:Commercial
+    - tnl:Public
+    - tnl:NonProfit
+    - tnl:PoliticalParty
+    - tnl:Sector
+  relations:
+    - tnl:same
+    - tnl:parent
+    - tnl:related
+    - tnl:member
+    - tnl:boardmember
+    - tnl:commissioner
+    - tnl:advisor
+    - tnl:employee
+    - tnl:lobbyist
+  equivalence: tnl:same
+
+
+logo:
+  - "<*(((><"
