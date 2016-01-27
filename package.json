@@ -18,12 +18,16 @@
     "minimist": "^1.1.2"
   },
   "devDependencies": {
-    "mocha": "^2.2.1",
+    "chai": "3.4.1",
     "jscs": "^1.10.0",
-    "jshint": "^2.6.0"
+    "jshint": "^2.6.0",
+    "mocha": "2.4.2"
   },
   "scripts": {
-    "test": "jshint *.js && jscs *.js"
+    "hint": "jshint *.js && jscs *.js",
+    "test": "mocha test/**/*.js",
+    "test:watch": "npm test -- --watch",
+    "check": "node -e \"console.log(JSON.stringify(require('./index'), null, 2))\""
   },
   "author": "Bert Spaan <bert@waag.org>",
   "license": "MIT",
