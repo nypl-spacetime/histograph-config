@@ -299,7 +299,6 @@
   "required": [
     "schemas",
     "stats",
-    "reasoner",
     "api",
     "redis",
     "elasticsearch",
