@@ -226,59 +226,7 @@
       }
     },
     "data": {
-      "type": "object",
-      "properties": {
-        "geonames": {
-          "type": "object",
-          "properties": {
-            "countries": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "extraUris": {
-              "type": "string"
-            }
-          }
-        },
-        "tgn": {
-          "type": "object",
-          "properties": {
-            "parents": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
-        },
-        "bag": {
-          "type": "object",
-          "properties": {
-            "db": {
-              "type": "object",
-              "properties": {
-                "host": {
-                  "type": "string"
-                },
-                "port": {
-                  "type": "integer"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "password": {
-                  "type": "string"
-                },
-                "database": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
+      "type": "object"
     },
     "import": {
       "type": "object",
@@ -323,7 +271,7 @@
       }
     }
   },
-  "additionalProperties": false,
+  "additionalProperties": true,
   "required": [
     "schemas",
     "stats",
