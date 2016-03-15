@@ -1,6 +1,6 @@
 {
   "name": "histograph-config",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -19,29 +19,14 @@
   },
   "devDependencies": {
     "chai": "3.4.1",
-    "jscs": "^1.10.0",
-    "jshint": "^2.6.0",
-    "mocha": "2.4.2"
+    "mocha": "2.4.2",
+    "standard": "^6.0.8"
   },
   "scripts": {
-    "hint": "jshint *.js && jscs *.js",
-    "test": "mocha test/**/*.js",
+    "test": "standard && mocha test/**/*.js",
     "test:watch": "npm test -- --watch",
     "check": "node -e \"console.log(JSON.stringify(require('./index'), null, 2))\""
   },
   "author": "Bert Spaan <bert@waag.org>",
-  "license": "MIT",
-  "jshintConfig": {
-    "node": true,
-    "globalstrict": false,
-    "undef": true,
-    "unused": true,
-    "noarg": true
-  },
-  "jscsConfig": {
-    "preset": "airbnb",
-    "requireCamelCaseOrUpperCaseIdentifiers": null,
-    "disallowMultipleVarDecl": true,
-    "requireMultipleVarDecl": null
-  }
+  "license": "MIT"
 }

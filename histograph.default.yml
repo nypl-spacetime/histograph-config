@@ -60,6 +60,13 @@ neo4j:                                      # Neo4j connection details + opt. au
   host: localhost
   port: 7474
 
+postgres:                                  # PostgreSQL connection parameters
+  host: localhost
+  port: 5432
+  user: postgres
+  password: postgres
+  database: histograph
+
 core:                                       # Core options (http://github.com/histograph/core)
   batchSize: 100
   batchTimeout: 250

@@ -112,7 +112,7 @@
         "host",
         "port",
         "queue",
-	"maxQueueSize"
+	      "maxQueueSize"
       ],
       "properties": {
         "host": {
@@ -144,6 +144,34 @@
           "type": "integer"
         }
       }
+    },
+    "postgres": {
+      "type": "object",
+      "properties": {
+        "host": {
+          "type": "string"
+        },
+        "port": {
+          "type": "integer"
+        },
+        "user": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "database": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "host",
+        "port",
+        "user",
+        "password",
+        "database"
+      ]
     },
     "neo4j": {
       "type": "object",
@@ -279,6 +307,7 @@
     "redis",
     "elasticsearch",
     "neo4j",
+    "postgres",
     "viewer",
     "data",
     "import",
