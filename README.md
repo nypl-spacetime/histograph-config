@@ -1,4 +1,4 @@
-# histograph-config
+# spacetime-config
 
 All Histograph components use histograph-config to load their configuration parameters:
 
@@ -51,4 +51,4 @@ All files must be provided and `local.yml` will override `default.yml`. The idea
 export HISTOGRAPH_CONFIG_DIR=/Users/bert/code/transparantnederland/config
 ```
 
-Copyright (C) 2016 [Waag Society](http://waag.org).
+Copyright (C) 2016 [Waag Society](http://waag.org), [NYPL](http://nypl.org).

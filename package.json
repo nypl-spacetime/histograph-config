@@ -1,16 +1,19 @@
 {
-  "name": "histograph-config",
-  "version": "0.5.2",
+  "name": "spacetime-config",
+  "version": "0.6.0",
   "description": "",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/histograph/config.git"
+    "url": "git+https://github.com/nypl-spacetime/spacetime-config.git"
   },
   "bugs": {
-    "url": "https://github.com/histograph/config/issues"
+    "url": "https://github.com/nypl-spacetime/spacetime-config/issues"
   },
-  "homepage": "https://github.com/histograph/config#readme",
+  "bin": {
+    "histograph-config": "echo.js"
+  },
+  "homepage": "https://github.com/nypl-spacetime/spacetime-config#readme",
   "dependencies": {
     "is-my-json-valid": "^2.12.1",
     "js-yaml": "^3.3.1",
@@ -24,8 +27,7 @@
   },
   "scripts": {
     "test": "standard && mocha test/**/*.js",
-    "test:watch": "npm test -- --watch",
-    "check": "node -e \"console.log(JSON.stringify(require('./index'), null, 2))\""
+    "test:watch": "npm test -- --watch"
   },
   "author": "Bert Spaan <bert@waag.org>",
   "license": "MIT"
