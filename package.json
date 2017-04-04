@@ -1,6 +1,6 @@
 {
   "name": "spacetime-config",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -11,19 +11,19 @@
     "url": "https://github.com/nypl-spacetime/spacetime-config/issues"
   },
   "bin": {
-    "spacetime-config": "echo.js"
+    "spacetime-config": "index.js"
   },
   "homepage": "https://github.com/nypl-spacetime/spacetime-config#readme",
   "dependencies": {
-    "is-my-json-valid": "^2.12.1",
-    "js-yaml": "^3.3.1",
-    "lodash": "^3.10.0",
-    "minimist": "^1.1.2"
+    "js-yaml": "^3.6.1",
+    "lodash": "^4.17.4",
+    "minimist": "^1.2.0",
+    "ramda": "^0.23.0"
   },
   "devDependencies": {
-    "chai": "3.4.1",
-    "mocha": "2.4.2",
-    "standard": "^6.0.8"
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "standard": "^7.1.2"
   },
   "scripts": {
     "test": "standard && mocha test/**/*.js",

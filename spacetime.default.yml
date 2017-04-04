@@ -1,0 +1,45 @@
+etl:
+  modulePrefix: "etl-"
+  modules:
+    geonames:
+      types:
+        PPL: 'st:Place'
+        PPLX: 'st:Neighborhood'
+      # filters:
+      #   featureClass: L
+      countries:
+        - US
+      extraUris: ./extra-uris.json
+    tgn:
+      types:
+        'inhabited places': 'st:Place'
+        'boroughs': 'st:Borough'
+        'neighborhoods': 'st:Neighborhood'
+      parents:
+        - tgn:7007567
+
+schemas:                                         # Schema/ontology options (http://github.com/nypl-spacetime/spacetime-schemas)
+  baseUri: http://rdf.spacetime.nypl.org/        # Base URI, used in JSON-LD serialization
+
+  baseType: Object
+
+  types:
+    - st:Place                                   # Histograph's default types
+    - st:Address
+    - st:Building
+    - st:Ward
+    - st:Map
+    - st:Photo
+    - st:Person
+    - st:Street
+    - st:Church
+    - st:OralHistory
+    - st:EnumerationDistrict
+    - st:Borough
+    - st:Neighborhood
+
+  relations:                                      # Default relations
+    - st:sameAs
+    - st:in
+
+  equivalence: st:sameAs

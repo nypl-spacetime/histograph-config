@@ -1,54 +1,43 @@
 # spacetime-config
 
-All Histograph components use histograph-config to load their configuration parameters:
+All NYC Space/Time Directory components use spacetime-config to load their configuration parameters:
+
+## Installation and usage
+
+### As a Node.js module
+
+Install:
+
+```
+npm install nypl-spacetime/spacetime-config
+```
+
+Use:
 
  ```js
-var config = require('histograph-config');
+const config = require('spacetime-config')
+
+console.log(config.etl.outputDir)
+// '/Users/bert/data/spacetime/etl/'
 ```
 
-histograph-config loads the default configuration from [`histograph.default.yml`](histograph.default.yml) and merges this with a required user-specified configuration file. You can specify the location of your own configuration file in two ways:
-
-1. Start the Histograph module with the argument `--config path/to/config.yml`
-2. Set the `HISTOGRAPH_CONFIG` environment variable to the path of the configuration file:
+### As a command-line tool
 
 ```bash
-export HISTOGRAPH_CONFIG=/Users/bert/code/histograph/config/histograph.bert.yml
+npm install -g nypl-spacetime/spacetime-config
+spacetime-config etl.outputDir
+# /Users/bert/data/spacetime/etl/
 ```
 
-This configuration file should at least specify the following options:
+## Configuration files
 
-```yml
-api:
-  dataDir: /Users/bert/data/histograph
-  admin:
-    name: histograph
-    password: password
+spacetime-config loads the default configuration from [`spacetime.default.yml`](spacetime.default.yml) and merges this with a required user-specified configuration file. You can specify the location of your own configuration file in two ways:
 
-neo4j:
-  user: neo4j
-  password: password
-
-import:
-  dirs:
-    - ../data
-    - ../../erfgoed-en-locatie/historische-geocoder/data
-```
-
-If you want to use this package in a project with a different schema, you can pass a config dir that contains the following files:
-
-```
-├── config.schema.json
-├── default.yml
-└── local.yml
-```
-
-All files must be provided and `local.yml` will override `default.yml`. The idea is that `local.yml` is specific to the production or development environment. You can specify the location of this directory in two ways:
-
-1. Start the project module with the argument `--config-dir path/to/config`
-2. Set the `HISTOGRAPH_CONFIG_DIR` environment variable to the path of the configuration file:
+1. Start the Space/Time module which uses spacetime-config with the argument `--config path/to/config.yml`
+2. Set the `SPACETIME_CONFIG` environment variable to the path of the configuration file:
 
 ```bash
-export HISTOGRAPH_CONFIG_DIR=/Users/bert/code/transparantnederland/config
+export SPACETIME_CONFIG=/Users/bert/.spacetime/spacetime.config.yml
 ```
 
 Copyright (C) 2016 [Waag Society](http://waag.org), [NYPL](http://nypl.org).

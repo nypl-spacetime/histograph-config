@@ -1,0 +1,7 @@
+etl:
+  outputDir: /Users/bert/data/spacetime
+
+import:
+  dirs:
+    - ../data
+    - ../../spacetime/data
