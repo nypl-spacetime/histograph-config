@@ -40,24 +40,31 @@ function readConfig () {
 
 if (require.main === module) {
   const config = readConfig()
-  const argToPath = (arg) => arg.split('.')
+  const argToPath = (arg) => ({
+    arg,
+    path: arg.split('.')
+  })
   const type = (obj) => Object.prototype.toString.call(obj).slice(8, -1)
 
-  const log = (value) => {
-    if (value !== undefined) {
-      const valueType = type(value)
+  const log = (path) => {
+    if (path.value !== undefined) {
+      const valueType = type(path.value)
       if (valueType === 'Array' || valueType === 'Object') {
-        console.log(JSON.stringify(value, null, 2))
+        console.log(JSON.stringify(path.value, null, 2))
       } else {
-        console.log(value)
+        console.log(path.value)
       }
+    } else {
+      throw new Error(`Can't find configuration option '${path.arg}' in configuration file`)
     }
   }
 
   if (argv._.length) {
     argv._
       .map(argToPath)
-      .map((path) => R.path(path, config))
+      .map((path) => Object.assign(path, {
+        value: R.path(path.path, config)
+      }))
       .forEach(log)
   } else {
     console.log(JSON.stringify(config, null, 2))
