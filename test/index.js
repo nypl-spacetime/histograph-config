@@ -17,7 +17,7 @@ describe('🚨  Space/Time Config 🚨', () => {
       require('../index')
       assert.fail()
     } catch (err) {
-      assert.equal(err.message, 'Please specify location of your user configuration in environment variable `SPACETIME_CONFIG` or `SPACETIME_CONFIG_DIR`, or use the `--config` or `--config-dir` command line option')
+      assert.equal(err.message, 'Please specify location of your user configuration in environment variable `SPACETIME_CONFIG`, or use the `--config` command line option')
     }
     done()
   })

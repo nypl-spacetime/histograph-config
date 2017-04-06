@@ -17,7 +17,7 @@ function readConfig () {
       configFile
     ]
   } else {
-    throw new Error('Please specify location of your user configuration in environment variable `SPACETIME_CONFIG` or `SPACETIME_CONFIG_DIR`, or use the `--config` or `--config-dir` command line option')
+    throw new Error('Please specify location of your user configuration in environment variable `SPACETIME_CONFIG`, or use the `--config` command line option')
   }
 
   const data = files.map((file) => {
