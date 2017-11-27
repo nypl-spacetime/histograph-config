@@ -1,6 +1,6 @@
 {
   "name": "spacetime-config",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -15,10 +15,10 @@
   },
   "homepage": "https://github.com/nypl-spacetime/spacetime-config#readme",
   "dependencies": {
-    "js-yaml": "^3.6.1",
+    "js-yaml": "^3.10.0",
     "lodash": "^4.17.4",
     "minimist": "^1.2.0",
-    "ramda": "^0.23.0"
+    "ramda": "^0.25.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
