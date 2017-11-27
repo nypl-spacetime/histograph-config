@@ -34,6 +34,7 @@ schemas:                                         # Schema/ontology options (http
     - st:Street
     - st:Church
     - st:OralHistory
+    - st:Document
     - st:EnumerationDistrict
     - st:Borough
     - st:Neighborhood
